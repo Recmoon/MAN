@@ -62,7 +62,7 @@ Running the script will do the following things:
 2. Train `MAN` network and select a checkpoint that performs best on the validation set as the final model. Notice that we only save the best-performing checkpoint on the validation set to save disk space.
 3. Evaluate the final model on the test set.
 
-## How to run Dual Encoding on another datasets?
+## How to run MAN on another datasets?
 
 Store the training, validation and test subset into three folders in the following structure respectively.
 ```shell
