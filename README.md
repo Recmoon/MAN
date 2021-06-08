@@ -14,8 +14,8 @@ Run the following script to install the required packages.
 ```shell
 virtualenv --system-site-packages -p python2.7 ~/ws_dual
 source ~/ws_dual/bin/activate
-git clone https://github.com/danieljf24/dual_encoding.git
-cd ~/dual_encoding
+git clone https://github.com/Recmoon/MAN.git
+cd ~/MAN
 pip install -r requirements.txt
 deactivate
 ```
