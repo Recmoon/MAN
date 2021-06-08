@@ -62,6 +62,22 @@ Running the script will do the following things:
 2. Train `MAN` network and select a checkpoint that performs best on the validation set as the final model. Notice that we only save the best-performing checkpoint on the validation set to save disk space.
 3. Evaluate the final model on the test set.
 
+## Expected Performance
+
+The expected performance of single-source training on VATEX is as follows. Notice that due to random factors in SGD based training, the numbers differ slightly from those reported in the paper.
+
+|  | R@1 | R@5 | R@10 | Med r | mAP |
+| ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
+| Text-to-Video | 7.6  | 22.4 | 31.8 | 33 | 0.155 |
+| Video-to-Text | 12.8 | 30.3 | 42.4 | 16 | 0.065 |
+
+The expected performance of multi-source training on VATEX and TGIF is as follows. Notice that due to random factors in SGD based training, the numbers differ slightly from those reported in the paper.
+
+|  | R@1 | R@5 | R@10 | Med r | mAP |
+| ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
+| Text-to-Video | 7.6  | 22.4 | 31.8 | 33 | 0.155 |
+| Video-to-Text | 12.8 | 30.3 | 42.4 | 16 | 0.065 |
+
 ## How to run MAN on another datasets?
 
 Store the training, validation and test subset into three folders in the following structure respectively.
