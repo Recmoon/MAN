@@ -1,5 +1,5 @@
 # MAN
-Source code of our Neorocomputing'21 paper [Multi-level Alignment Network for Domain Adaptive Cross-modal Retrieval](https://www.researchgate.net/publication/349383195_Multi-level_Alignment_Network_for_Domain_Adaptive_Cross-modal_Retrieval).
+Source code of our Neurocomputing'21 paper [Multi-level Alignment Network for Domain Adaptive Cross-modal Retrieval](https://www.researchgate.net/publication/349383195_Multi-level_Alignment_Network_for_Domain_Adaptive_Cross-modal_Retrieval).
 
 ## Requirements
 
@@ -114,7 +114,7 @@ deactive
 where `caption_num` denotes the number of captions for each video. For the MSRVTT dataset, the value of `caption_num` is 20. 
 
 ## References
-If you find the package useful, please consider citing our Neorocomputing'21 paper:
+If you find the package useful, please consider citing our Neurocomputing'21 paper:
 ```
 @article{dong2021multi,
   title={Multi-level Alignment Network for Domain Adaptive Cross-modal Retrieval},
