@@ -33,12 +33,12 @@ mkdir -p $ROOTPATH && cd $ROOTPATH
 wget http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz
 tar zxf word2vec.tar.gz
 ```
-The data can also be downloaded from [Google Drive](https://drive.google.com/drive/folders/1GoomucXoAmhd3Jhngdnea7t0GOnJoGth?usp=sharing) and [Baidu Pan](https://pan.baidu.com/s/1Z5wgpZQPL2YZakGJsD1Khg).
+The data can also be downloaded from [Google Drive](https://drive.google.com/drive/folders/1GoomucXoAmhd3Jhngdnea7t0GOnJoGth?usp=sharing) and [Baidu Pan]().
 Note: Code of video feature extraction is available [here](https://github.com/xuchaoxi/video-cnn-feat).
 
 ## Getting started
 
-# Single-source training
+#### Single-source training
 Run the following script to train on VATEX as a source dataset and MSR-VTT as a target dataset and evaluate `MAN` network on MSR-VTT.
 ```shell
 source ~/ws_dual/bin/activate
@@ -50,7 +50,7 @@ Running the script will do the following things:
 2. Train `MAN` network and select a checkpoint that performs best on the validation set as the final model. Notice that we only save the best-performing checkpoint on the validation set to save disk space.
 3. Evaluate the final model on the test set.
 
-# Multi-source training
+#### Multi-source training
 Run the following script to train on TGIF and VATEX as source datasets and MSR-VTT as a target dataset and evaluate `MAN` network on MSR-VTT.
 ```shell
 source ~/ws_dual/bin/activate
