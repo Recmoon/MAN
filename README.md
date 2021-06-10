@@ -68,15 +68,15 @@ The expected performance of single-source training on VATEX is as follows. Notic
 
 |  | R@1 | R@5 | R@10 | Med r | mAP |
 | ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
-| Text-to-Video | 7.6  | 22.4 | 31.8 | 33 | 0.155 |
-| Video-to-Text | 12.8 | 30.3 | 42.4 | 16 | 0.065 |
+| Text-to-Video | 5.9  | 16.1 | 22.9 | 74 | 0.117 |
+| Video-to-Text | 10.8 | 23.9 | 32.3 | 32 | 0.05 |
 
 The expected performance of multi-source training on VATEX and TGIF is as follows. Notice that due to random factors in SGD based training, the numbers differ slightly from those reported in the paper.
 
 |  | R@1 | R@5 | R@10 | Med r | mAP |
 | ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
-| Text-to-Video | 7.6  | 22.4 | 31.8 | 33 | 0.155 |
-| Video-to-Text | 12.8 | 30.3 | 42.4 | 16 | 0.065 |
+| Text-to-Video | 9.7  | 21.4 | 30.8 | 45 | 0.152 |
+| Video-to-Text | 14.3 | 31.7 | 41.6 | 16 | 0.08 |
 
 ## How to run MAN on another datasets?
 
