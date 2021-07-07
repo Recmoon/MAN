@@ -12,8 +12,8 @@ Source code of our Neurocomputing'21 paper [Multi-level Alignment Network for Do
 We used virtualenv to setup a deep learning workspace that supports PyTorch.
 Run the following script to install the required packages.
 ```shell
-virtualenv --system-site-packages -p python2.7 ~/ws_dual
-source ~/ws_dual/bin/activate
+virtualenv --system-site-packages -p python2.7 ~/ws_man
+source ~/ws_man/bin/activate
 git clone https://github.com/Recmoon/MAN.git
 cd ~/MAN
 pip install -r requirements.txt
@@ -21,19 +21,31 @@ deactivate
 ```
 
 #### Required Data(todo)
-Run `do_get_dataset.sh` or the following script to download and extract [MSR-VTT(1.9G)](http://lixirong.net/data/cvpr2019/msrvtt10k-text-and-resnet-152-img1k.tar.gz) dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz).
+Run the following script to download and extract [MSR-VTT(1.9G)]() dataset, [TGIF(1.9G)]() dataset, [VATEX(1.9G)]() dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz). Note that the train, val, test set of MSR-VTT dataset share the same FeatureData, and TextData can be downloaded from here(). 
 The extracted data is placed in `$HOME/VisualSearch/`.
 ```shell
 ROOTPATH=$HOME/VisualSearch
 mkdir -p $ROOTPATH && cd $ROOTPATH
 
 # download and extract dataset
+wget 
+wget
+wget
+wget
+unzip tgif.zip
+unzip vatex.zip
+unzip mstvtt10ktrain.zip
+unzip TextData.zip 
+cp -r msrvtt10ktrain msrvtt10ktest
+cp -r msrvtt10ktrain msrvtt10kval
+mv TextData/msrvtt10kval.caption.txt msrvtt10kval/TextData/
+mv TextData/msrvtt10ktest.caption.txt msrvtt10ktest/TextData/
 
 # download and extract pre-trained word2vec
 wget http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz
 tar zxf word2vec.tar.gz
 ```
-The data can also be downloaded from [Google Drive](https://drive.google.com/drive/folders/1GoomucXoAmhd3Jhngdnea7t0GOnJoGth?usp=sharing) and [Baidu Pan]().
+The data can also be downloaded from [Google Drive]() and [Baidu Pan]().
 Note: Code of video feature extraction is available [here](https://github.com/xuchaoxi/video-cnn-feat).
 
 ## Getting started
@@ -41,7 +53,7 @@ Note: Code of video feature extraction is available [here](https://github.com/xu
 #### Single-source training
 Run the following script to train on VATEX as a source dataset and MSR-VTT as a target dataset and evaluate `MAN` network on MSR-VTT.
 ```shell
-source ~/ws_dual/bin/activate
+source ~/ws_man/bin/activate
 ./do_all.sh 
 deactive
 ```
@@ -53,7 +65,7 @@ Running the script will do the following things:
 #### Multi-source training
 Run the following script to train on TGIF and VATEX as source datasets and MSR-VTT as a target dataset and evaluate `MAN` network on MSR-VTT.
 ```shell
-source ~/ws_dual/bin/activate
+source ~/ws_man/bin/activate
 ./do_all_multi.sh 
 deactive
 ```
@@ -115,14 +127,14 @@ where `train_set`, `val_set` and `test_set` indicate the name of training, valid
 
 If you pass the format check, first set the sub-set name in `do_all.sh` for single-source training and `do_all_multi.sh` for multi-source training and use the following script to train and evaluate MAN on your own dataset:
 ```shell
-source ~/ws_dual/bin/activate
+source ~/ws_man/bin/activate
 ./do_all.sh
 deactive
 ```
 or
 
 ```shell
-source ~/ws_dual/bin/activate
+source ~/ws_man/bin/activate
 ./do_all_multi.sh
 deactive
 ```
