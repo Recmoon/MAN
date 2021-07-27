@@ -21,21 +21,21 @@ deactivate
 ```
 
 #### Required Data(todo)
-Run the following script to download and extract [MSR-VTT(1.9G)]() dataset, [TGIF(1.9G)]() dataset, [VATEX(1.9G)]() dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz). Note that the train, val, test set of MSR-VTT dataset share the same FeatureData, and TextData can be downloaded from here(). 
+Run the following script to download and extract [MSR-VTT(1.9G)](http://8.210.46.84:8000/tgif.tar.gz) dataset, [TGIF(1.9G)](http://8.210.46.84:8000/vatex.tar.gz) dataset, [VATEX(1.9G)](http://8.210.46.84:8000/msrvtt10ktrain.tar.gz) dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz). Note that the train, val, test set of MSR-VTT dataset share the same feature data, and TextData can be downloaded from here(http://8.210.46.84:8000/TextData.tar.gz). 
 The extracted data is placed in `$HOME/VisualSearch/`.
 ```shell
 ROOTPATH=$HOME/VisualSearch
 mkdir -p $ROOTPATH && cd $ROOTPATH
 
 # download and extract dataset
-wget 
-wget
-wget
-wget
-unzip tgif.zip
-unzip vatex.zip
-unzip mstvtt10ktrain.zip
-unzip TextData.zip 
+wget http://8.210.46.84:8000/tgif.tar.gz
+wget http://8.210.46.84:8000/vatex.tar.gz
+wget http://8.210.46.84:8000/msrvtt10ktrain.tar.gz
+wget http://8.210.46.84:8000/TextData.tar.gz
+tar -zxvf tgif.tar.gz
+tar -zxvf vatex.tar.gz
+tar -zxvf mstvtt10ktrain.tar.gz
+tar -zxvf TextData.tar.gz
 cp -r msrvtt10ktrain msrvtt10ktest
 cp -r msrvtt10ktrain msrvtt10kval
 mv TextData/msrvtt10kval.caption.txt msrvtt10kval/TextData/
@@ -45,7 +45,7 @@ mv TextData/msrvtt10ktest.caption.txt msrvtt10ktest/TextData/
 wget http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz
 tar zxf word2vec.tar.gz
 ```
-The data can also be downloaded from [Google Drive]() and [Baidu Pan]().
+
 Note: Code of video feature extraction is available [here](https://github.com/xuchaoxi/video-cnn-feat).
 
 ## Getting started
@@ -80,15 +80,15 @@ The expected performance of single-source training on VATEX is as follows. Notic
 
 |  | R@1 | R@5 | R@10 | Med r | mAP |
 | ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
-| Text-to-Video | 5.9  | 16.1 | 22.9 | 74 | 0.117 |
-| Video-to-Text | 10.8 | 23.9 | 32.3 | 32 | 0.05 |
+| Text-to-Video | 6.0  | 16.5 | 23.3 | 73 | 0.118 |
+| Video-to-Text | 9.8 | 24.0 | 32.5 | 32 | 0.049 |
 
 The expected performance of multi-source training on VATEX and TGIF is as follows. Notice that due to random factors in SGD based training, the numbers differ slightly from those reported in the paper.
 
 |  | R@1 | R@5 | R@10 | Med r | mAP |
 | ------------- | ------------- | ------------- | ------------- |  ------------- | ------------- |
-| Text-to-Video | 9.7  | 21.4 | 30.8 | 45 | 0.152 |
-| Video-to-Text | 14.3 | 31.7 | 41.6 | 16 | 0.08 |
+| Text-to-Video | 8.2  | 20.7 | 28.5 | 51 | 0.149 |
+| Video-to-Text | 17.6 | 35.0 | 44.5 | 14 | 0.071 |
 
 ## How to run MAN on another datasets?
 
