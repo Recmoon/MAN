@@ -21,7 +21,7 @@ deactivate
 ```
 
 #### Required Data(todo)
-Run the following script to download and extract [MSR-VTT(1.9G)](http://8.210.46.84:8000/tgif.tar.gz) dataset, [TGIF(1.9G)](http://8.210.46.84:8000/vatex.tar.gz) dataset, [VATEX(1.9G)](http://8.210.46.84:8000/msrvtt10ktrain.tar.gz) dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz). Note that the train, val, test set of MSR-VTT dataset share the same feature data, and TextData can be downloaded from here(http://8.210.46.84:8000/TextData.tar.gz). 
+Run the following script to download and extract [MSR-VTT(2.2G)](http://8.210.46.84:8000/tgif.tar.gz) dataset, [TGIF(7.3G)](http://8.210.46.84:8000/vatex.tar.gz) dataset, [VATEX(7.0G)](http://8.210.46.84:8000/msrvtt10ktrain.tar.gz) dataset and a pre-trained [word2vec(3.0G)](http://lixirong.net/data/w2vv-tmm2018/word2vec.tar.gz). Note that the train, val, test set of MSR-VTT dataset share the same feature data, and TextData can be downloaded from [here](http://8.210.46.84:8000/TextData.tar.gz). 
 The extracted data is placed in `$HOME/VisualSearch/`.
 ```shell
 ROOTPATH=$HOME/VisualSearch
