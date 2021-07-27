@@ -1,4 +1,4 @@
-rootpath=/root/VisualSearch
+rootpath=$HOME/VisualSearch
 cross_domain_flag=1
 multi_flag=1
 
